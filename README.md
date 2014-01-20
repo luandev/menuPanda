@@ -1,44 +1,49 @@
 menuPanda
 =========
+
 Um menu animado em CSS3 e jQuery que funciona como o 
 menu do app do Facebook, no lugar da estrutura do menu
 aparece um ícone, esse ícone chama uma barra lateral.
 
 Como Usa?
 =========
-$(document).ready(function(){
-	$("#menu").pandfy();
-});
+É facil, veja:
 
-ATENÇÃO: É importante que todos os Plugins sejam chamados depois do pandfy();
+	$(document).ready(function(){
+		$("#menu").pandfy();
+	});
+
+mas ATENÇÃO: É importante que todos os Plugins sejam chamados depois do pandfy();
 você pode colocá-los na mesma chamada tipo:
 
-$(document).ready(function(){
-	//pandfy() vem primeiro!:
-	$("#menu").pandfy();
+	$(document).ready(function(){
 	
-	//aqui vc põe todas as outras chamadas
-	$('#shuffle').cycle({ 
-		fx:     'shuffle', 
-		easing: 'easeOutBack', 
-		delay:  -4000 
+		//pandfy() vem primeiro!:
+		$("#menu").pandfy();
+		
+		//aqui vc põe todas as outras chamadas
+		$('#shuffle').cycle({ 
+			fx:     'shuffle', 
+			easing: 'easeOutBack', 
+			delay:  -4000 
+		});
 	});
-});
 
 lembrando que a estrutura deve ser
 
-<nav id="nomeDoMenu">
-	<ul data-title="Aba Principal">
-		<li><a href="#">link interno ou externo</a></li>
-		<ul data-title="titulo do submenu">
-			<li><a href="#">e assim suscetivamente...</a></li>	
+	<nav id="nomeDoMenu">
+		<ul data-title="Aba Principal">
+			<li><a href="#">link interno ou externo</a></li>
+			<ul data-title="titulo do submenu">
+				<li><a href="#">e assim suscetivamente...</a></li>	
+			</ul>
 		</ul>
-	</ul>
-</nav>
+	</nav>
 
 
 Como Instala?
 =========
+
 1 - adicione o jquery
 snippet: <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
@@ -53,5 +58,6 @@ você pode modifica-las para adaptarem-se ao seu layout
 
 Quem Fez?
 =========
+
 Luan Cittá
 https://www.facebook.com/luan.citta
